@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { signIn, signOut, useSession } from 'next-auth/react'
 
-function Navbar({session}) {
-    const { status } = useSession()
+function Navbar() {
+    const { data: session, status } = useSession()
     const loading = status === "loading"
     
   return (
