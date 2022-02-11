@@ -1,7 +1,7 @@
 import { useSession } from 'next-auth/react'
 
 const dashboard = () => {
-  const { data: session, status } = useSession()
+  const { status } = useSession()
   const authenticated = status === 'authenticated'
   const loading = status === "loading"
 
